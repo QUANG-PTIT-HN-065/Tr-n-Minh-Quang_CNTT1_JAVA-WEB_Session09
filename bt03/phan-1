@@ -1,0 +1,15 @@
+Phần 1 – Phân tích & Thiết kế
+
+- Công cụ sử dụng: Cookie
+Yêu cầu: lưu 30 ngày, kể cả khi tắt trình duyệt
+=> Session không đáp ứng được vì session sẽ mất khi đóng browser
+=> Cookie lưu trực tiếp trên client, có thể set thời gian sống
+- Không dùng Session vì:
+Chỉ tồn tại trong phiên làm việc
+Không giữ được trạng thái khi người dùng quay lại sau
+- Chống XSS (bẫy document.cookie)
+
+- Giải pháp:
+
+Bật flag HttpOnly => JavaScript không đọc được cookie
+Có thể thêm Secure (nếu dùng HTTPS)

@@ -1,0 +1,16 @@
+-Phần 1 – Phân tích & Đề xuất giải pháp
+Giải pháp 1: Dùng <input type="hidden">
+Sau mỗi bước, dữ liệu được đẩy xuống HTML
+Khi submit form => gửi lại toàn bộ dữ liệu (bao gồm hidden field) lên server
+Dữ liệu đi theo request qua từng bước
+Giải pháp 2: Dùng @SessionAttributes
+Dữ liệu được lưu trong Session phía Server
+Mỗi bước chỉ cập nhật thêm vào object
+Đến bước 3 => lấy toàn bộ dữ liệu từ session để xử lý
+
+-Phần 2 – So sánh
+Tiêu chí	   Hidden Input	                 @SessionAttributes
+
+Bảo mật	    Thấp (F12 sửa được)	              Cao (lưu server)
+Độ phức tạp	   Đơn giản	                        Phức tạp hơn
+RAM Server	   Không tốn	             Có thể phình nếu không dọn
