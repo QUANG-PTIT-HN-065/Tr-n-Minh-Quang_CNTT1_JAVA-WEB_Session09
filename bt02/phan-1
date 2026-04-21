@@ -1,5 +1,0 @@
-Đoạn if (guestName == null) không bao giờ được chạy
-vì khi sử dụng @CookieValue("guest_name"), Spring mặc định yêu cầu cookie này phải tồn tại (required = true).
-Trong lần truy cập đầu tiên, trình duyệt chưa có cookie guest_name, nên Spring sẽ ném MissingRequestCookieException ngay trong quá trình binding tham số,
-trước khi phương thức homePage được thực thi.
-Vì phương thức không được gọi, nên đoạn if (guestName == null) bên trong hoàn toàn không có cơ hội chạy.
